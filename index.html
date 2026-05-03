@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no' />
+<title>Santa Biblia — Reina Valera 1909</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+    color: #1a2a3a;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Header con borde decorativo */
+  .header {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    border-bottom: 4px solid #ff0000;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .header h1 a {
+    color: #1a2a3a;
+    text-decoration: none;
+  }
+
+  /* BOTÓN ROJO DESTACADO */
+  .donacion-mp {
+    text-align: center;
+    margin: 0 auto 25px auto;
+  }
+  
+  .btn-mp-rojo {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    box-shadow: 0 6px 20px rgba(255,0,0,0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  .btn-mp-rojo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(255,0,0,0.5);
+    background: linear-gradient(135deg, #ee0000 0%, #bb0000 100%);
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  .donacion-texto {
+    font-size: 0.85em;
+    margin-top: 8px;
+    color: #555;
+  }
+
+  /* Grid de libros */
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 30px 0;
+  }
+
+  .book-card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  .book-card a {
+    text-decoration: none;
+    color: #1a5276;
+    font-weight: 500;
+    font-size: 0.95em;
+  }
+
+  .book-card a:hover {
+    color: #ff0000;
+  }
+
+  /* Sección de recursos */
+  .resources {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .resources h3 {
+    color: #1a2a3a;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ff0000;
+    display: inline-block;
+  }
+
+  .resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .resource-links a {
+    background: #f0f2f5;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #1a5276;
+    font-size: 0.9em;
+    transition: 0.2s;
+  }
+
+  .resource-links a:hover {
+    background: #ff0000;
+    color: white;
+  }
+
+  .fine {
+    text-align: center;
+    font-size: 0.75em;
+    color: #777;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  @media (max-width: 768px) {
+    .book-grid {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+    .btn-mp-rojo {
+      font-size: 1.2em;
+      padding: 12px 25px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  
+  <!-- Header -->
+  <div class="header">
+    <h1><a href='../'>Santa Biblia — Reina Valera 1909</a></h1>
+  </div>
+
+  <!-- BOTÓN ROJO MERCADOPAGO -->
+  <div class="donacion-mp">
+    <a href="https://link.mercadopago.com.ar/steinitz" target="_blank" class="btn-mp-rojo">
+      💰 DONAR con MercadoPago 💰
+    </a>
+    <div class="donacion-texto">Apoya este proyecto – Biblia Reina Valera 1909 sigue siendo gratis gracias a donaciones</div>
+  </div>
+
+  <!-- Grid de libros -->
+  <div class="book-grid">
+    <div class="book-card"><a href='GEN01.htm'>Génesis</a></div>
+    <div class="book-card"><a href='EXO01.htm'>Éxodo</a></div>
+    <div class="book-card"><a href='LEV01.htm'>Levítico</a></div>
+    <div class="book-card"><a href='NUM01.htm'>Números</a></div>
+    <div class="book-card"><a href='DEU01.htm'>Deuteronomio</a></div>
+    <div class="book-card"><a href='JOS01.htm'>Josué</a></div>
+    <div class="book-card"><a href='JDG01.htm'>Jueces</a></div>
+    <div class="book-card"><a href='RUT01.htm'>Rut</a></div>
+    <div class="book-card"><a href='1SA01.htm'>1 Samuel</a></div>
+    <div class="book-card"><a href='2SA01.htm'>2 Samuel</a></div>
+    <div class="book-card"><a href='1KI01.htm'>1 Reyes</a></div>
+    <div class="book-card"><a href='2KI01.htm'>2 Reyes</a></div>
+    <div class="book-card"><a href='1CH01.htm'>1 Crónicas</a></div>
+    <div class="book-card"><a href='2CH01.htm'>2 Crónicas</a></div>
+    <div class="book-card"><a href='EZR01.htm'>Esdras</a></div>
+    <div class="book-card"><a href='NEH01.htm'>Nehemías</a></div>
+    <div class="book-card"><a href='EST01.htm'>Ester</a></div>
+    <div class="book-card"><a href='JOB01.htm'>Job</a></div>
+    <div class="book-card"><a href='PSA001.htm'>Salmos</a></div>
+    <div class="book-card"><a href='PRO01.htm'>Proverbios</a></div>
+    <div class="book-card"><a href='ECC01.htm'>Eclesiastés</a></div>
+    <div class="book-card"><a href='SNG01.htm'>Cantar de los Cantares</a></div>
+    <div class="book-card"><a href='ISA01.htm'>Isaías</a></div>
+    <div class="book-card"><a href='JER01.htm'>Jeremías</a></div>
+    <div class="book-card"><a href='LAM01.htm'>Lamentaciones</a></div>
+    <div class="book-card"><a href='EZK01.htm'>Ezequiel</a></div>
+    <div class="book-card"><a href='DAN01.htm'>Daniel</a></div>
+    <div class="book-card"><a href='HOS01.htm'>Oseas</a></div>
+    <div class="book-card"><a href='JOL01.htm'>Joel</a></div>
+    <div class="book-card"><a href='AMO01.htm'>Amós</a></div>
+    <div class="book-card"><a href='OBA01.htm'>Abdías</a></div>
+    <div class="book-card"><a href='JON01.htm'>Jonás</a></div>
+    <div class="book-card"><a href='MIC01.htm'>Miqueas</a></div>
+    <div class="book-card"><a href='NAM01.htm'>Nahum</a></div>
+    <div class="book-card"><a href='HAB01.htm'>Habacuc</a></div>
+    <div class="book-card"><a href='ZEP01.htm'>Sofonías</a></div>
+    <div class="book-card"><a href='HAG01.htm'>Hageo</a></div>
+    <div class="book-card"><a href='ZEC01.htm'>Zacarías</a></div>
+    <div class="book-card"><a href='MAL01.htm'>Malaquías</a></div>
+    <div class="book-card"><a href='MAT01.htm'>San Mateo</a></div>
+    <div class="book-card"><a href='MRK01.htm'>Marcos</a></div>
+    <div class="book-card"><a href='LUK01.htm'>San Lucas</a></div>
+    <div class="book-card"><a href='JHN01.htm'>Juan</a></div>
+    <div class="book-card"><a href='ACT01.htm'>Hechos</a></div>
+    <div class="book-card"><a href='ROM01.htm'>Romanos</a></div>
+    <div class="book-card"><a href='1CO01.htm'>1 Corintios</a></div>
+    <div class="book-card"><a href='2CO01.htm'>2 Corintios</a></div>
+    <div class="book-card"><a href='GAL01.htm'>Gálatas</a></div>
+    <div class="book-card"><a href='EPH01.htm'>Efesios</a></div>
+    <div class="book-card"><a href='PHP01.htm'>Filipenses</a></div>
+    <div class="book-card"><a href='COL01.htm'>Colosenses</a></div>
+    <div class="book-card"><a href='1TH01.htm'>1 Tesalonicenses</a></div>
+    <div class="book-card"><a href='2TH01.htm'>2 Tesalonicenses</a></div>
+    <div class="book-card"><a href='1TI01.htm'>1 Timoteo</a></div>
+    <div class="book-card"><a href='2TI01.htm'>2 Timoteo</a></div>
+    <div class="book-card"><a href='TIT01.htm'>Tito</a></div>
+    <div class="book-card"><a href='PHM01.htm'>Filemón</a></div>
+    <div class="book-card"><a href='HEB01.htm'>Hebreos</a></div>
+    <div class="book-card"><a href='JAS01.htm'>Santiago</a></div>
+    <div class="book-card"><a href='1PE01.htm'>1 Pedro</a></div>
+    <div class="book-card"><a href='2PE01.htm'>2 Pedro</a></div>
+    <div class="book-card"><a href='1JN01.htm'>1 Juan</a></div>
+    <div class="book-card"><a href='2JN01.htm'>2 Juan</a></div>
+    <div class="book-card"><a href='3JN01.htm'>3 Juan</a></div>
+    <div class="book-card"><a href='JUD01.htm'>Judas</a></div>
+    <div class="book-card"><a href='REV01.htm'>Apocalipsis</a></div>
+  </div>
+
+  <!-- Recursos y descargas -->
+  <div class="resources">
+    <h3>📖 Recursos</h3>
+    <div class="resource-links">
+      <a href="GEN01.htm">¡Leer ahora!</a>
+      <a href="https://eBible.org/epub/spaRV1909.epub" target="_blank">📱 epub3: spaRV1909.epub</a>
+      <a href="https://eBible.org/pdf/spaRV1909/" target="_blank">📄 PDF</a>
+      <a href="https://ebible.org/study/?w1=bible&t1=local%3AspaRV1909&v1=GN1_1" target="_blank">🌐 Browser Bible</a>
+      <a href="https://ebible.org/sword/zip/spaRV1909eb.zip" target="_blank">⚔️ Crosswire Sword module</a>
+      <a href="https://ebible.org/find/details.php?id=spaRV1909" target="_blank">📚 More formats</a>
+      <a href="https://ebible.org/Scriptures/spaRV1909_html.zip" target="_blank">💾 spaRV1909_html.zip</a>
+      <a href="copyright.htm">⚖️ Public Domain</a>
+    </div>
+  </div>
+
+  <div class="fine">
+    HTML generated with <a href='https://haiola.org'>Haiola</a> by <a href='https://eBible.org'>eBible.org</a> 11 Mar 2026 from source files dated 10 Aug 2015<br/>
+    <a href='https://eBible.org/certified/' target='_blank'>Certificado eBible.org</a>
+  </div>
+</div>
+</body>
+</html>
